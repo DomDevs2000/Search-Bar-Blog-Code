@@ -43,14 +43,14 @@ const SearchBar = () => {
 
     const search = countries
         .filter((country) => {
-            if (searchInput == '') {
-                return;
+            if (searchInput === '') {
+                return
             } else if (
                 country.name
                     .toLowerCase()
                     .includes(searchInput.toLowerCase())
             ) {
-                return country;
+                return country
             }
         })
         .map((country, key) => {
